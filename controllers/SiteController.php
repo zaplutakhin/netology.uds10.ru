@@ -54,11 +54,8 @@ class SiteController extends Controller
         ];
     }
 
-
     public function actionIndex()
     {
-        /**return $this->render('index');*/
-
         $faqarray = Faq::find()->where(['status' => 'Опубликован'])->orWhere(['status'=>'Ожидает ответа'])->all();
         return $this->render('index',['faqarray'=>$faqarray]);
     }
@@ -86,8 +83,4 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
-
-
-
-
 }

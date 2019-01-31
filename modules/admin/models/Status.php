@@ -5,19 +5,19 @@ namespace app\modules\admin\models;
 use Yii;
 
 /**
- * This is the model class for table "theme".
+ * This is the model class for table "status".
  *
  * @property int $id
- * @property string $category
+ * @property string $status
  */
-class Theme extends \yii\db\ActiveRecord
+class Status extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'theme';
+        return 'status';
     }
 
     /**
@@ -26,8 +26,8 @@ class Theme extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category'], 'required'],
-            [['category'], 'string', 'max' => 50],
+            [['status'], 'required'],
+            [['status'], 'string', 'max' => 20],
         ];
     }
 
@@ -38,8 +38,7 @@ class Theme extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'category' => 'Категория',
-            'temp' => 'Временный'
-        ];
+            'status' => 'Статус',
+         ];
     }
 }

@@ -12,13 +12,12 @@ use yii\base\Model;
  *
  */
 class LoginForm extends Model
+    /** @var string */
 {
     public $username;
     public $password;
     public $rememberMe = true;
-
     private $_user = false;
-
 
     /**
      * @return array the validation rules.
@@ -52,7 +51,6 @@ class LoginForm extends Model
             }
         }
     }
-
     /**
      * Logs in a user using the provided username and password.
      * @return bool whether the user is logged in successfully
@@ -64,7 +62,6 @@ class LoginForm extends Model
         }
         return false;
     }
-
     /**
      * Finds user by [[username]]
      *

@@ -4,13 +4,13 @@ namespace app\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\base\Model;
-
 class Faq extends ActiveRecord
-
 {
-
     public static function tableName()
     {
+        /**
+         * @return string
+         */
         return 'faq';
     }
 
