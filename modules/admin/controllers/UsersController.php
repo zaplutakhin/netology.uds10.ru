@@ -126,4 +126,5 @@ class UsersController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    public $layout = '@app/modules/admin/views/layouts/main-top.php';
 }

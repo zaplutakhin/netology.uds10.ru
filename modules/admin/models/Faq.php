@@ -51,6 +51,7 @@ class Faq extends \yii\db\ActiveRecord
             'date' => 'Дата',
             'autor' => 'Автор',
             'status' => 'Статус',
+            'temp' => 'Временный',
         ];
     }
 }

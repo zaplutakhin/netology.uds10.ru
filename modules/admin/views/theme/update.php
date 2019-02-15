@@ -6,9 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\modules\admin\models\Theme */
 
 $this->title = 'Update Theme: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Themes', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+
 ?>
 <div class="theme-update">
 

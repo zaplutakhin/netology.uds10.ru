@@ -39,7 +39,6 @@ class Theme extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'category' => 'Категория',
-            'temp' => 'Временный'
         ];
     }
 }

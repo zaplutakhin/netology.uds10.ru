@@ -56,7 +56,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $faqarray = Faq::find()->where(['status' => 'Опубликован'])->orWhere(['status'=>'Ожидает ответа'])->all();
+        $faqarray = Faq::find()->where(['status' => 'Опубликован'])->all();
         return $this->render('index',['faqarray'=>$faqarray]);
     }
 

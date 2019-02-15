@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Theme */
 
-$this->title = $model->id;
+$this->title = $model->category;
 
 \yii\web\YiiAsset::register($this);
 ?>
@@ -15,8 +15,8 @@ $this->title = $model->id;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Изменить', ['update', 'id' => $model->category], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->category], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -25,12 +25,15 @@ $this->title = $model->id;
         ]) ?>
     </p>
 
+    <?php foreach ($model as $faq): ?>
+        <?= Html::encode("{$faq->question}")?>
+    <?php endforeach; ?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'category',
         ],
     ]) ?>
+
 
 </div>

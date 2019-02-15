@@ -87,9 +87,8 @@ class ThemeController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
-
         return $this->render('update', [
             'model' => $model,
         ]);
@@ -124,4 +123,5 @@ class ThemeController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    public $layout = '@app/modules/admin/views/layouts/main-top.php';
 }

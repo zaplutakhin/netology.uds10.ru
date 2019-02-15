@@ -106,4 +106,5 @@ class FaqController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    public $layout = '@app/modules/admin/views/layouts/main-top.php';
 }

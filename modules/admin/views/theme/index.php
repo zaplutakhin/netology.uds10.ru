@@ -20,7 +20,7 @@ $this->title = 'Темы вопросов';
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
             'id',
             'category',
